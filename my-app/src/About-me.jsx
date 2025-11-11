@@ -1,6 +1,8 @@
 import { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import './App.css';
+import linkedinImg from './assets/icons/linkedin.webp';
+import githubImg from './assets/icons/github.png';
 
 function AboutMe() {
   const navigate = useNavigate();
@@ -89,10 +91,10 @@ function AboutMe() {
         <div className='flex gap-2 mt-4 sm:mt-5 justify-center flex-wrap'>
         <span className='text-sm sm:text-base'>Reach me through <span className='text-yellow-300'>diegoarmandodluca@gmail.com</span> or find me on:</span> 
         <a className='flex items-center' target='_blank' href='https://www.linkedin.com/in/diego-de-luca-95561b274/'>
-            <img className='w-6 h-6 sm:w-7 sm:h-7 object-contain' src='./src/assets/icons/linkedin.webp'></img>
+            <img className='w-6 h-6 sm:w-7 sm:h-7 object-contain' src={linkedinImg}></img>
         </a>
         <a className='flex items-center' target='_blank' href='https://github.com/Biti-k'>
-            <img className='w-6 h-6 sm:w-7 sm:h-7 object-contain' src='./src/assets/icons/github.png'></img>
+            <img className='w-6 h-6 sm:w-7 sm:h-7 object-contain' src={githubImg}></img>
         </a>
         </div>
     </div>

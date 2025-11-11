@@ -1,6 +1,18 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router';
 import './App.css';
+import planetImg from "./assets/projectsPlanet.gif";
+import raceImg from "./assets/projectRace.png";
+import skateImg from "./assets/skatey.png";
+
+import reactIcon from "./assets/icons/react.png";
+import tailwindIcon from "./assets/icons/tailwind.webp";
+import nodeIcon from "./assets/icons/nodejs.png";
+import laravelIcon from "./assets/icons/laravel.png";
+import htmlIcon from "./assets/icons/html.png";
+import jsIcon from "./assets/icons/javascript.png";
+import cssIcon from "./assets/icons/css.webp";
+
 
 function Projects() {
   const navigate = useNavigate();
@@ -9,27 +21,28 @@ function Projects() {
   const [projects, setProjects] = useState([
     {
       title: "Planets Exploration App 🪐",
-      image: "/portfolio/src/assets/projectsPlanet.gif",
+      image: planetImg,
       url: "https://github.com/Biti-k/planetsReact",
       urlWebsite: "https://planetsreact.netlify.app/",
-      description: "A web application that allows users to explore different planets in our solar system and outside of it using data from NASA APIs through my NodeJS backend (expressJS). ",
-      icons: ['/portfolio/src/assets/icons/react.png', '/portfolio/src/assets/icons/tailwind.webp', '/portfolio/src/assets/icons/nodejs.png']
+      description: "A web application that allows users to explore different planets...",
+      icons: [reactIcon, tailwindIcon, nodeIcon],
     },
     {
       title: "Race Manager App 🏃",
-      image: "/portfolio/src/assets/projectRace.png",
+      image: raceImg,
       url: "https://github.com/Biti-k/raceApp",
-      description: "Final project for my studies in Web Development. A web application to manage racing events, including participant registration, race scheduling, and results tracking in live.",
-      icons: ['/portfolio/src/assets/icons/laravel.png', '/portfolio/src/assets/icons/tailwind.webp', '/portfolio/src/assets/icons/react.png']
+      description: "Final project for my studies...",
+      icons: [laravelIcon, tailwindIcon, reactIcon],
     },
     {
       title: "Skate Shop E-commerce 🛹",
-      image: "/portfolio/src/assets/skatey.png",
+      image: skateImg,
       url: "https://github.com/yourusername/project3",
-      description: "An e-commerce website for a skate shop, featuring product listings and shopping cart functionality",
-      icons: ['/portfolio/src/assets/icons/html.png', '/portfolio/src/assets/icons/javascript.png', '/portfolio/src/assets/icons/css.webp']
+      description: "An e-commerce website for a skate shop...",
+      icons: [htmlIcon, jsIcon, cssIcon],
     },
   ]);
+
 
   useEffect(() => {
     const cards = document.querySelectorAll('.project-card');
