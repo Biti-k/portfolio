@@ -23,7 +23,7 @@ function App() {
     }
     flashOn();
     setTimeout(() => {
-      navigate('/system'); // ✅ Navegación correcta
+      navigate('/portfolio/system'); // ✅ Navegación correcta
     }, 1350); // Tiempo para que la animación termine
   };
 

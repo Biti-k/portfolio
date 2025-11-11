@@ -12,11 +12,11 @@ const rootElement = document.getElementById("root");
 createRoot(rootElement).render(
   <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/system" element={<System />} />
-        <Route path="/about-me" element={<AboutMe />} />
-        <Route path="/experience" element={<Experience />} />
+        <Route path="/portfolio" element={<App />} />
+        <Route path="/portfolio/projects" element={<Projects />} />
+        <Route path="/portfolio/system" element={<System />} />
+        <Route path="/portfolio/about-me" element={<AboutMe />} />
+        <Route path="/portfolio/experience" element={<Experience />} />
       </Routes>
   </BrowserRouter>
 );
