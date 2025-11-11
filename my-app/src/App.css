@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @theme {
   --color-custom-purple: #240D43; 
+  --color-custom-dark: #242424;
+  --color-custom-system: #48435C;
 }
 *{
   font-family: "Alan Sans", sans-serif;
@@ -24,58 +26,4 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.project-card{
-  background-color: #242424;
-}
-
-.bg-gris{
-  background: url('./assets/stars.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-svg:has(.pathHover:hover){
-  transform: scale(1.1);
-}
-/* 
-svg:has(.pathHover:hover) + .fillSquare {
-  height: 400px !important;
-} */
-
-svg{
-  pointer-events: none;
-}
-
-path{
-  pointer-events: auto;
-}
-
-.fillSquare{
-  pointer-events: auto;
-}
-
-.projectWave{
-  pointer-events: none;
-}

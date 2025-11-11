@@ -28,12 +28,30 @@ export default function RotatedText({
   // CORRECCIÓN: ángulo por carácter -> 360/n (no 180/n)
   const angleStep = 180 / n;
 
+
   // estado que representa el offset (startAngle animado)
   const [angleOffset, setAngleOffset] = useState(startAngle);
 
   // refs para RAF y tiempo anterior
   const rafRef = useRef(null);
   const lastTimeRef = useRef(null);
+
+    // 🔹 Detecta si la pantalla es menor que "md" (≈768px)
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    // 🔹 Calcula el radio dinámico para RotatedText
+  radius = isMobile ? '20vw' : '6vw';
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
 
   // si startAngle cambia desde fuera, actualizamos el offset inicial
   useEffect(() => {

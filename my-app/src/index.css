@@ -13,22 +13,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
+} */
+/* a:hover {
   color: #535bf2;
-}
+} */
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
 
 
 @media (prefers-color-scheme: light) {
@@ -61,8 +54,8 @@ body {
 }	
 
 .animateGalaxyIn{
-  transition: 1.25s ease-in-out;
-  animation: spin 3s linear infinite;
+  transition: 1s ease-in-out;
+  animation: spinOpacity 1.4s;
   width: 300vw;
   height: 100%;
 }
@@ -70,7 +63,6 @@ body {
 .mainContainer{
   width: 100%;
   height: 100%;
-  overflow: hidden;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -80,17 +72,13 @@ html{
   width: 100vw;
   height: 100%;
   margin: 0;
-  overflow:hidden;
+  overflow-x: hidden;
 }
 body{
   width: 100vw;
   height: 100%;
   margin: 0;
-  overflow:hidden;
-}
-
-.flashOff{
-  display: none;
+  overflow-x: hidden;
 }
 
 .fondoLoco{
@@ -99,12 +87,14 @@ opacity: 0.8;
 background: linear-gradient(135deg, #38ff5655 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #38ff56 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #38ff5655 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #38ff56 25%, #41831b 25%) 0px 0/ 32px 32px;
 }
 
+.flashOff{
+  display: none;
+}
 
 .flash{
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #48435C;
   z-index: 10;
   animation: flashAnim 1s ease-in-out;
 }
@@ -118,6 +108,24 @@ background: linear-gradient(135deg, #38ff5655 25%, transparent 25%) -16px 0/ 32p
   animation: big-cercle 750ms ease-in-out;
 }
 
+.big-cercle-about-me{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffb326;
+  z-index: 10;
+  animation: big-cercle 750ms ease-in-out;
+}
+
+.big-cercle-experience{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #851197;
+  z-index: 10;
+  animation: big-cercle 750ms ease-in-out;
+}
+
 .bg-galaxy{
   background-image: linear-gradient(to right top, #484354, #484061, #443e6f, #3e3c7d, #323a8c, #304da8, #2761c4, #0076e0, #00a3ff, #00c9f6, #00e8b6, #26ff59);
   padding: 20px;
@@ -125,6 +133,15 @@ background: linear-gradient(135deg, #38ff5655 25%, transparent 25%) -16px 0/ 32p
 
 .shadow-star{
   box-shadow: #69ff8c 0px 0px 100px;
+}
+
+.shadow-experience{
+  box-shadow: #9c1b93 0px 0px 100px;
+}
+
+
+.shadow-about{
+  box-shadow: #f01818 0px 0px 100px;
 }
 
 @keyframes flashAnim {
@@ -140,4 +157,102 @@ background: linear-gradient(135deg, #38ff5655 25%, transparent 25%) -16px 0/ 32p
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@keyframes spinOpacity {
+  from { transform: rotate(0deg);opacity:100%; }
+  to { transform: rotate(360deg);opacity:0%; }
+}
+
+/* @keyframes waveMove {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(50px); }
+} */
+@keyframes waveMove {
+  0% { 
+    transform: scale(1) translateX(0); 
+  }
+  50% {
+    transform: scale(1.05) translateX(-5%);
+  }
+  100% { 
+    transform: scale(1) translateX(0); 
+  }
+}
+
+@keyframes waveMove2 {
+  0% { 
+    transform: scale(1) translateX(0); 
+  }
+  50% {
+    transform: scale(1.08) translateX(-8%);
+  }
+  100% { 
+    transform: scale(1) translateX(0); 
+  }
+}
+
+.animate-waveMove {
+  animation: waveMove 8s ease-in-out infinite;
+}
+
+.animate-waveMove2 {
+  animation: waveMove2 10s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animation-back {
+  animation: inset-back 0.75s ease-in-out forwards;
+}
+.animation-back-left-bottom {
+  animation: inset-back-left-bottom 0.75s ease-in-out forwards;
+}
+.animation-back-right-top {
+  animation: inset-back-right-top 0.75s ease-in-out forwards;
+}
+
+@keyframes inset-back {
+  from {
+    clip-path: circle(100% at center);
+  }
+  to {
+    clip-path: circle(8% at center);
+  }
+}
+
+@keyframes inset-back-left-bottom {
+  from {
+    clip-path: circle(100% at 10% 70%);
+  }
+  to {
+    clip-path: circle(8% at 10% 70%);
+  }
+}
+
+@keyframes inset-back-right-top {
+  from {
+    clip-path: circle(100% at 90% 15%);
+  }
+  to {
+    clip-path: circle(8% at 90% 15%);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.bg-gris{
+  background: url('./assets/stars.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
