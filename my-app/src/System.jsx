@@ -11,7 +11,7 @@ function System() {
     projectsRef.current?.classList.remove('animate-ping');
     projectsRef.current?.classList.add('big-cercle');
     setTimeout(() => {
-      navigate('/portfolio/projects');
+      navigate('/projects');
     }, 750);
   };
 
@@ -20,7 +20,7 @@ function System() {
     projectsRef.current?.classList.add('big-cercle-about-me');
   
     setTimeout(() => {
-        navigate('/portfolio/about-me');
+        navigate('/about-me');
     }, 750);
   };
 
@@ -29,7 +29,7 @@ function System() {
     projectsRef.current?.classList.add('big-cercle-experience');
 
     setTimeout(() => {
-      navigate('/portfolio/experience');
+      navigate('/experience');
     }, 750);
   };
 

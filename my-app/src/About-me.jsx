@@ -22,7 +22,7 @@ function AboutMe() {
     redScreen.current?.classList.remove('opacity-0');
     redScreen.current?.classList.add('opacity-100', 'z-20');
     setTimeout(() => {
-      navigate("/portfolio/system");
+      navigate("/system");
     }, 700);
   };
 

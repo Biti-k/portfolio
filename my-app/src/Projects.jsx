@@ -46,7 +46,7 @@ function Projects() {
     greenScreen.current?.classList.remove('opacity-0');
     greenScreen.current?.classList.add('opacity-100', 'z-20');
     setTimeout(() => {
-      navigate("/portfolio/system");
+      navigate("/system");
     }, 700);
   };
 
