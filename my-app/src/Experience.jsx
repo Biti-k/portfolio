@@ -71,7 +71,7 @@ function Experience() {
         className="absolute text-xl sm:text-2xl z-10 text-white left-3 top-3 border border-purple-300 p-2 sm:p-3 rounded-3xl cursor-pointer bg-purple-800/30 duration-200 hover:bg-purple-800/70 transition-all"
         onClick={animateReturn}
       >
-        <p>Return <span>💫</span></p>
+        <p>Return <span>🚀</span></p>
       </div>
 
       {/* 🔸 Sección principal */}
